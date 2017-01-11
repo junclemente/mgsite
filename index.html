@@ -19,20 +19,50 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-text navbarbrand" href="#">GnM</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Venue</a></li>
+          <li><a href="#">Honeypot</a></li>
+          <li><a href="#">Travel Accomodations</a></li>
+          <li><a href="#">RSVP</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
   <div class="container">
     <div>
       <h1>Grace and Melvin</h1>
     </div>
     <!-- <img src="images/mg1.jpg"> -->
     <!-- INFORMATION -->
-    <div><!-- Venue -->
-      <a href="http://www.sdbg.com/admiralkidd.php" target="_blank">Admiral Kidd Conference and Catering Center Skyline Room (Upstairs of Venue)</a><br>
-      <address>
-      33050 Acoustic Avenue, Suite 200<br>
-      San Diego, CA 92136<br>
-      </address>
-      <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIVAyjQqr3oART4br7m5V2xA&key=AIzaSyB3MtJaBnJ6TUeyE8DuKnO8PWRTFZ1Fcfw" allowfullscreen></iframe>
-    </div>
+    <div class="row"><!-- Venue -->
+      <div class="col-md-6">
+        <a href="http://www.sdbg.com/admiralkidd.php" target="_blank">Admiral Kidd Conference and Catering Center Skyline Room (Upstairs of Venue)</a><br>
+          <address>
+          33050 Acoustic Avenue, Suite 200<br>
+          San Diego, CA 92136<br>
+          </address>
+        </div><!-- /.col-md-4 -->
+        <div class="col-md-6">
+          <iframe width="300" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIVAyjQqr3oART4br7m5V2xA&key=AIzaSyB3MtJaBnJ6TUeyE8DuKnO8PWRTFZ1Fcfw" allowfullscreen></iframe>
+        </div><!-- /.col-md-4 -->
+    </div><!-- /.row -->
+
     <div><!-- Directions -->
     </div>
     <div><!-- Attire -->
@@ -92,6 +122,8 @@
     </div>
   </div><!-- /container -->
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>

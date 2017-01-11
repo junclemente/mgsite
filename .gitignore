@@ -1,5 +1,6 @@
 *.COMMIT_EDITMSG
 *.doc
+*.lock.Wedding Website Layout.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
