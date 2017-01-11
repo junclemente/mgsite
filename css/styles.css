@@ -10,6 +10,9 @@ body {
   /*background-position: center;*/
   /*filter: blur(5px);*/
   background: #5AFFF9;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Architects Daughter', cursive;
   color: #3D22B3;
 }
