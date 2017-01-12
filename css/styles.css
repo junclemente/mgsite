@@ -1,5 +1,6 @@
 body {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
+  padding-bottom: 100px;
   /*background-image: url('../images/mg1.jpg');*/
   /*-webkit-background-size: cover;*/
   /*-moz-background-size: cover;*/
@@ -15,6 +16,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Architects Daughter', cursive;
   color: #3D22B3;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 10px;
 }
 
 #map {
