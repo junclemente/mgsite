@@ -35,10 +35,11 @@
         <ul class="nav navbar-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Venue</a></li>
-          <li><a href="#">Honeypot</a></li>
+          <li><a href="#">Honeyfunds</a></li>
           <li><a href="#">Travel Accomodations</a></li>
           <li><a href="#">RSVP</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">Map of Area</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -51,16 +52,15 @@
     <!-- <img src="images/mg1.jpg"> -->
     <!-- INFORMATION -->
     <div class="row"><!-- Venue -->
-      <div class="col-md-6">
+      <div class="col-md-12">
+        <h3>Venue</h3>
         <a href="http://www.sdbg.com/admiralkidd.php" target="_blank">Admiral Kidd Conference and Catering Center Skyline Room (Upstairs of Venue)</a><br>
           <address>
           33050 Acoustic Avenue, Suite 200<br>
           San Diego, CA 92136<br>
           </address>
-        </div><!-- /.col-md-4 -->
-        <div class="col-md-6">
-          <iframe width="300" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIVAyjQqr3oART4br7m5V2xA&key=AIzaSyB3MtJaBnJ6TUeyE8DuKnO8PWRTFZ1Fcfw" allowfullscreen></iframe>
-        </div><!-- /.col-md-4 -->
+          <img id="admiralkiddphoto" class="text-right" src="https://lh3.googleusercontent.com/y9OljLM_Y2EE8fGDVZrcHzbUlq-L5cK7RaYsRIh2XrWQnhVAsNEjvSL1oZuBcTXbzJiFmjHyiMZNcw=w1366-h768-rw-no" alt="Admiral Kidd Venue">
+        </div><!-- /.col-md-8 -->
     </div><!-- /.row -->
 
     <div><!-- Directions -->
@@ -120,10 +120,16 @@
       <p>Don’t have an instagram? Text the photo to this number: ############ </p>
       <p>These will also be printed and projected as well.</p>
     </div>
+    <div class="row">
+      <h3>Map of Area</h3>
+      <div id="map"></div>
+    </div><!-- /.row -->
   </div><!-- /container -->
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZfEKsV_naJhH5fWjJxdWwlt4YgUWPBJc&callback=initMap"></script>
 </html>
