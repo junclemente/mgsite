@@ -1,6 +1,7 @@
 *.COMMIT_EDITMSG
 *.doc
 *.lock.Wedding Website Layout.*
+index-old.html
 /site_references/*
 
 # Byte-compiled / optimized / DLL files

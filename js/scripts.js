@@ -2,14 +2,15 @@
 var navBar = {
   "navBarList": [
     { "name": "Home", "url": "home"},
-    { "name": "Venue", "url": "venue"},
-    { "name": "Honeyfunds", "url": "honeyfunds"},
-    { "name": "Travel Accomodations", "url": "travelaccomodations"},
-    { "name": "RSVP", "url": "rsvp"},
-    { "name": "Schedule of Events", "url": "scheduleOfEvents"},
-    { "name": "About Us", "url": "aboutUs"},
+    { "name": "Our Story", "url": "ourStory"},
     { "name": "Add To Our Story", "url": "addToOurStory"},
-    { "name": "Map of Area", "url": "mapofarea"}
+    { "name": "Schedule of Events", "url": "scheduleOfEvents"},
+    { "name": "Information", "url": "information"},
+    { "name": "Accommodations", "url": "accommodations"},
+    { "name": "Registry", "url": "registry"},
+    { "name": "RSVP", "url": "rsvp"},
+
+
   ],
 
   "display": function() {
@@ -32,9 +33,50 @@ $('ul.nav').find('a').click(function() {
   var $href = $(this).attr('href');
   var $anchor = $($href).offset();
   // window.scrollTo($anchor.left, $anchor.top);
-  $('body').animate({ scrollTop: $anchor.top });
+  $('body').animate({
+     scrollTop: $anchor.top
+   });
   return false;
 });
+
+
+// Count Down Timer:
+// Resource: http://stackoverflow.com/questions/9335140/how-to-countdown-to-a-date
+function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + 'days ';
+            document.getElementById(id).innerHTML += hours + 'hrs ';
+            document.getElementById(id).innerHTML += minutes + 'mins ';
+            document.getElementById(id).innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+CountDownTimer('09/02/2017 12:00 AM', 'countdown');
 
 
 // Add Google Map to Page
@@ -53,10 +95,10 @@ function initMap() {
 
   // Location markers to place on map
   var myMarkers = [
-                    ['Admiral Kidd Conference and Catering Center', 32.722775, -117.217717, "test test"],
-                    ['Homewood Suites by Hilton San Diego', 32.729500, -117.215923, "test test test"],
-                    ['Courtyard San Diego Airport/Liberty Station', 32.730704, -117.215709, "test test test test"],
-                    ['Holiday Inn Bayside', 32.726246, -117.222454, "Holiday Inn"]
+                    ['Admiral Kidd Conference and Catering Center', 32.722775, -117.217717],
+                    ['Homewood Suites by Hilton San Diego', 32.729500, -117.215923],
+                    ['Courtyard San Diego Airport/Liberty Station', 32.730704, -117.215709],
+                    ['Holiday Inn Bayside', 32.726246, -117.222454]
                   ]
 
 
@@ -67,9 +109,11 @@ function initMap() {
   // Iterate locations in myMarkers and add to map
   for (i = 0; i < myMarkers.length; i++ ) {
     var position = new google.maps.LatLng(myMarkers[i][1], myMarkers[i][2]);
+    console.log(position);
     bounds.extend(position);  // Used to determine map center
     marker = new google.maps.Marker({
       position: position,
+      label: String(i+1),
       map: map,
       title: myMarkers[i][0]
     });

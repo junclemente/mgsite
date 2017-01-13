@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #3D22B3;
 }
 
+p {
+  font-size: 15px;
+}
+
 section {
   padding-top: 60px;
   padding-bottom: 10px;
