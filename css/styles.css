@@ -1,39 +1,97 @@
 body {
-  /*padding-top: 70px;*/
-  padding-bottom: 100px;
-  /*background-image: url('../images/mg1.jpg');*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
-  /*background-position: center;*/
-  /*filter: blur(5px);*/
-  background: #5AFFF9;
+  background-image: url("../images/mg1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Architects Daughter', cursive;
-  color: #3D22B3;
+h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 40px;
+  color: red;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  padding-left: 20px;
 }
 
 p {
-  font-size: 15px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 section {
   padding-top: 60px;
   padding-bottom: 10px;
+/*  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  border: 5px solid white;*/
+  background: rgba(225, 125, 119, 0.5);
+  /*background: rgba(255,255,255,0.3);*/
 }
 
-#map {
-  height: 400px;
-  width: 90%;
-  margin: auto;
+footer {
+  background: black;
+  /*width: 100%;*/
+  min-height: 70px;
 }
 
-#admiralkiddphoto {
-  width: 45%;
-  text: alig;
+/* hr style source: https://css-tricks.com/examples/hrs/ */
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    width: 90%;
+}
+
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+/* Navbar Customization */
+.navbar-default {
+  background: white;
+}
+.navbar-default .navbar-nav li a {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+/* end Navbar Customization */
+
+/* Classes */
+.directions {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Media Queries */
+@media screen and (min-width: 481px) {
+  .hidden_desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hidden_mobile {
+    display: none;
+  }
 }
