@@ -14,7 +14,7 @@ var navBar = {
   ],
 
   "display": function() {
-    var navHTMLLinkGeneric = '<li><a href="#%navLink%">%page%</a></li';
+    var navHTMLLinkGeneric = '<li><a href="#" data-toggle="#%navLink%">%page%</a><li>';
 
     for (var i=0; i < navBar.navBarList.length; i++) {
       navHTMLLink = navHTMLLinkGeneric.replace("%page%", navBar.navBarList[i]["name"]);
@@ -27,17 +27,28 @@ var navBar = {
 // Populate navBar
 navBar.display();
 
+$("a[data-toggle").on("click", function(e) {
+  e.preventDefault();
+  var selector = $(this).data("toggle");
+  $("section.content").hide();
+  $(selector).fadeIn(850);
+})
+
+// $('.nav a').on('click', function() {
+//   $('.navbar-toggle').click();
+// })
+
 
 // Animate to smooth scroll
-$('ul.nav').find('a').click(function() {
-  var $href = $(this).attr('href');
-  var $anchor = $($href).offset();
-  // window.scrollTo($anchor.left, $anchor.top);
-  $('body').animate({
-     scrollTop: $anchor.top
-   });
-  return false;
-});
+// $('ul.nav').find('a').click(function() {
+//   var $href = $(this).attr('href');
+//   var $anchor = $($href).offset();
+//   // window.scrollTo($anchor.left, $anchor.top);
+//   $('body').animate({
+//      scrollTop: $anchor.top
+//    });
+//   return false;
+// });
 
 
 // Count Down Timer:
@@ -67,10 +78,10 @@ function CountDownTimer(dt, id)
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
 
-            document.getElementById(id).innerHTML = days + 'days ';
-            document.getElementById(id).innerHTML += hours + 'hrs ';
-            document.getElementById(id).innerHTML += minutes + 'mins ';
-            document.getElementById(id).innerHTML += seconds + 'secs';
+            document.getElementById(id).innerHTML = days + ' days  ';
+            document.getElementById(id).innerHTML += hours + ' hrs ';
+            document.getElementById(id).innerHTML += minutes + ' min ';
+            document.getElementById(id).innerHTML += seconds + ' sec';
         }
 
         timer = setInterval(showRemaining, 1000);

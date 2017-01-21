@@ -2,6 +2,7 @@
 *.doc
 *.lock.Wedding Website Layout.*
 index-old.html
+index-scroll-nav.html
 /site_references/*
 
 # Byte-compiled / optimized / DLL files

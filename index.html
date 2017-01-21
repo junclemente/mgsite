@@ -21,39 +21,39 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-<!--         <a class="navbar-text navbarbrand" href="#">GnM</a> -->
-      </div>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul id="navBarContent" class="nav navbar-nav"></ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul id="navBarContent" class="nav navbar-nav"></ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+  </header>
 
   <div class="container">
-    <section id="home">
+    <section id="home" class="content">
       <h1>Grace and Melvin's Wedding Page</h1>
       <h3>September 2, 2017</h3>
-      <h4><time id="countdown"></time></h4>
     </section>
 
-    <section id="ourStory">
+    <section id="ourStory" class="content">
       <h1>Our Story</h1>
       <p>In 2007, Grace started working at Pacific Pathology Inc. during her college years and met Melvin.  They became friends and began to spend time outside of work. Dinner and a movie was typical, but the occasional snowboarding trip was a fun activity they enjoyed.  Eventually, that friendship blossomed into something greater and they became each others plus one.</p>
 
       <p>Fast forward to 2015.  It was at this time when Grace and Melvin embarked on a journey to see one of the most beautiful places in America.  Off to Alaska they went on a 10 day cruise.  It was on this cruise where Melvin planned to ask for Grace’s hand in marriage. Melvin knew that Grace didn’t want a big crowd, but to have an intimate moment where they both can treasure together.  While on the way to dinner, Melvin took Grace outside on the deck to look at the setting sun.  While she stared into the sunset, Melvin got on one knee and proposed.  Melvin said some things which made her smile and she said YES!!!</p>
     </section>
 
-    <section id="addToOurStory">
+    <section id="addToOurStory" class="content">
       <h1>Add To Our Story</h1>
       <p>Capture moments with your camera on your cell phone anytime on the big day and post onto instagram  using #gracevin. These memories will be projected throughout the reception and printed at the booth.  Remember to pick up the photo!</p>
 
@@ -62,7 +62,7 @@
       <p>These will also be printed and projected as well.</p>
     </section>
 
-    <section id="scheduleOfEvents">
+    <section id="scheduleOfEvents" class="content">
       <h1>Schedule of Events</h1>
 
       <article>
@@ -99,7 +99,7 @@
       </article>
     </section>
 
-    <section id="information">
+    <section id="information" class="content">
       <h1>Information</h1>
 
       <article>
@@ -126,7 +126,7 @@
           </ul>
         </div>
         <h4>From the 5</h4>
-        <div class="directions">
+        <div class="directions" class="content">
           <ul>
             <li>5 South</li>
             <li>Use the 2 right lanes to take Exit #20 towards S Rosecrans (far right lane)</li>
@@ -165,7 +165,7 @@
 
     </section>
 
-    <section id="accommodations">
+    <section id="accommodations" class="content">
       <h1>Accommodations</h1>
       <div class="row">
         <div class="col-md-4">
@@ -198,7 +198,7 @@
       </div>
     </section>
 
-    <section id="registry">
+    <section id="registry" class="content">
       <h1>Registry</h1>
       <p>We are honored you will share in our special day. Your presence is our gift! Gifts are not necessary but if you are willing to, we accept your kind donations!</p>
 
@@ -206,7 +206,7 @@
       <a href="#" target="_blank">Honeyfund Link</a>
     </section>
 
-    <section id="rsvp">
+    <section id="rsvp" class="content">
       <h1>RSVP</h1>
       <p>Please RSVP before <em>May 20th 2017</em> to join us on our big day!</p>
 
@@ -215,10 +215,18 @@
 
 
   </div><!-- /container -->
-  <footer>
+  <footer class="navbar-fixed-bottom">
     <div class="container-fluid">
       <div class="row">
-          <h2>Save The Date: September 02, 2017</h2>
+        <div class="col-md-4">
+          <h4>Save The Date: September 02, 2017</h4>
+        </div>
+        <div class="col-md-4">
+          <h4><time id="countdown"></time> left...</h4>
+        </div>
+        <div class="col-md-4">
+          Email: <a href="emailto:graceandmelvin@gmail.com">graceandmelvin@gmail.com</a><br>
+          Phone: <a href="tel:18588489060">858.848.9060</a>
         </div>
       </div>
     </div>
@@ -229,5 +237,4 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script async defer src="js/scripts.js"></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZfEKsV_naJhH5fWjJxdWwlt4YgUWPBJc&callback=initMap"></script> -->
 </html>
