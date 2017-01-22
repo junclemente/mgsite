@@ -122,6 +122,11 @@ nav a {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+
+/*#mg-carousel {
+  max-height: 60vh;
+}*/
+
 /* Media Queries */
 @media screen and (min-width: 481px) {
   .hidden_desktop {
