@@ -34,9 +34,15 @@ $("a[data-toggle").on("click", function(e) {
   $(selector).fadeIn(850);
 })
 
-// $('.nav a').on('click', function() {
-//   $('.navbar-toggle').click();
-// })
+// Auto Close Navbar on Click
+$('.nav a').on('click', function() {
+  $('.navbar-toggle').click();
+})
+// $('.nav a'.on('click', function() {
+//   if($('.navbar-toggle').css('display') !='none'){
+//     $('.navbar-toggle').click();
+//   }
+// }));
 
 
 // Animate to smooth scroll
