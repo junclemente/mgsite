@@ -124,7 +124,14 @@ nav a {
 
 
 div.carousel-caption {
-  color: blue;
+  /*position: relative;*/
+  font-weight: bold;
+  display: block;
+  /*background-color: black;*/
+  text-shadow: 2px 2px 4px #FF7D77;
+  color: white;
+  padding-bottom: 3px;
+  bottom: 2px;
 }
 
 /* Media Queries */
