@@ -36,13 +36,11 @@ $("a[data-toggle").on("click", function(e) {
 
 // Auto Close Navbar on Click
 $('.nav a').on('click', function() {
+  if( $('.navbar-toggle').css('display') != 'none') {
   $('.navbar-toggle').click();
+
+  }
 })
-// $('.nav a'.on('click', function() {
-//   if($('.navbar-toggle').css('display') !='none'){
-//     $('.navbar-toggle').click();
-//   }
-// }));
 
 
 // Animate to smooth scroll

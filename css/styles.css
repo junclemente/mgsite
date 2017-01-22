@@ -99,8 +99,14 @@ nav a {
 }
 
 .navbar-default {
+/*  height: 60px;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  ms-overflow-style: -ms-autohiding-scrollbar;*/
   background: #FF7D77;
 }
+
 .navbar-default .navbar-nav li a {
   font-size: 16px;
   font-weight: bold;
@@ -136,6 +142,7 @@ div.carousel-caption {
 
 #proposal-img {
   max-height: 80vh;
+  margin-top: 20px;
 }
 
 /* Media Queries */
