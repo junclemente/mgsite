@@ -9,9 +9,7 @@ var navBar = {
     { "name": "Accommodations", "url": "accommodations"},
     { "name": "Registry", "url": "registry"},
     { "name": "RSVP", "url": "rsvp"},
-
-
-  ],
+],
 
   "display": function() {
     var navHTMLLinkGeneric = '<li><a href="#" data-toggle="#%navLink%">%page%</a><li>';

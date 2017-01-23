@@ -1,23 +1,14 @@
-body {
-  background-image: url("../images/mg1.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-
 h1 {
   font-family: 'Russo One', sans-serif;
   font-size: 40px;
   color: red;
+  text-shadow: 2px 2px 4px black;
 }
 
 h2, h3, h4, h5, h6 {
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
+  text-shadow: 2px 2px 4px black;
   padding-left: 20px;
 }
 
@@ -59,12 +50,13 @@ a {
   font-style: italic;
 }
 
-
+/*********************************************************/
 /* hr style source: https://css-tricks.com/examples/hrs/ */
+/*********************************************************/
 hr {
     height: 30px;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     border-width: 1px 0 0 0;
     border-radius: 20px;
     width: 90%;
@@ -76,12 +68,14 @@ hr:before { /* Not really supposed to work, but does */
     height: 30px;
     margin-top: -31px;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
 
+/************************/
 /* Navbar Customization */
+/************************/
 nav {
   background: #FF7D77;
   font-size: 16px;
@@ -98,6 +92,9 @@ nav a {
   margin-right: auto;
 }
 
+.navbar-header {
+  height: 80px;
+}
 .navbar-default {
 /*  height: 60px;
   white-space: nowrap;
@@ -112,9 +109,9 @@ nav a {
   font-weight: bold;
   color: black;
 }
-/* end Navbar Customization */
 
-/* Classes */
+/* Custom Class Definitions */
+/****************************/
 .directions {
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
@@ -128,7 +125,14 @@ nav a {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+/***************************/
+/* Our Story Customization */
+/* Carousel Customizations */
+/***************************/
 
+#ourStory {
+  text-align: justify;
+}
 div.carousel-caption {
   /*position: relative;*/
   font-weight: bold;
@@ -140,20 +144,67 @@ div.carousel-caption {
   bottom: 2px;
 }
 
+.img-rounded {
+  text-align-left: auto;
+  text-align-right: auto;
+}
+#mg-carousel {
+  max-width: 400px;
+  height: auto;
+  align-right: auto;
+  align-left: auto;
+}
+
 #proposal-img {
   max-height: 80vh;
   margin-top: 20px;
 }
 
+Section#information.content>article>h2 {
+  font-weight: bold;
+  color: #ff7d77;
+  text-shadow: 2px 2px 4px black;
+}
+
+.glyphicons {
+  color: #FF7D77 !important;
+}
+
+/*****************/
 /* Media Queries */
-@media screen and (min-width: 481px) {
+/*****************/
+@media screen and (min-width: 768px) {
   .hidden_desktop {
     display: none;
   }
+
+  body {
+  background-image: url("../images/mg1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #ff7d77;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .hidden_mobile {
     display: none;
+  }
+
+  body {
+  background-image: url("../images/mg1-mobile.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #ff7d77;
   }
 }
