@@ -192,7 +192,13 @@ hr:before { /* Not really supposed to work, but does */
   bottom: 2px;
 }
 
+.carousel {
+  max-height: 60%;
+}
+
 .carousel-inner>.item>img {
+  max-height: 80vh;
+  width: auto;
   margin: 0 auto;
 }
 
