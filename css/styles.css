@@ -47,7 +47,6 @@ section:not(#home) {
 footer, navbar-fixed-bottom {
   background: black;
   max-height: 80px;
-  color: red;
   font-size: 15px;
   font-weight: bold;
 }
@@ -96,7 +95,6 @@ hr:before { /* Not really supposed to work, but does */
 /************************/
 /* Navbar Customization */
 /************************/
-
 .navbar-default {
   background: #ff7f50;
 }
