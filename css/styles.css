@@ -1,20 +1,25 @@
 h1 {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Oleo Script Swash Caps', cursive, sans-serif;
   font-size: 40px;
-  color: red;
+  color: #800020;
   text-shadow: 2px 2px 4px black;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: 'Gloria Hallelujah', cursive;
-  color: white;
+h2 {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  color: #ff7f50;
   text-shadow: 2px 2px 4px black;
   padding-left: 20px;
 }
 
+h3, h4, h5, h6 {
+  font-family: 'Nunito Sans', sans-serif;
+  color:  white;
+}
+
 p {
   font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Nunito Sans', sans-serif;
   padding-left: 20px;
   padding-right: 20px;
   color: white;
@@ -45,9 +50,15 @@ time {
   color: white;
 }
 
-a {
-  color: #F82062;
+a, a:visited {
+  color: white;
   font-style: italic;
+}
+
+a:hover {
+  color: #ff7d77;
+  text-decoration: none;
+  text-shadow: 0 0 8px blue;
 }
 
 /*********************************************************/
@@ -125,6 +136,12 @@ nav a {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.hotel_img {
+  object-fit: cover;
+  width: auto;
+  height: 250px;
+}
+
 /***************************/
 /* Our Story Customization */
 /* Carousel Customizations */
@@ -144,17 +161,18 @@ div.carousel-caption {
   bottom: 2px;
 }
 
-.img-rounded {
+/*.img-rounded {
   text-align-left: auto;
   text-align-right: auto;
 }
-#mg-carousel {
+*/
+/*#mg-carousel {
   max-width: 400px;
   height: auto;
   align-right: auto;
   align-left: auto;
 }
-
+*/
 #proposal-img {
   max-height: 80vh;
   margin-top: 20px;
