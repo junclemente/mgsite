@@ -182,13 +182,18 @@ hr:before { /* Not really supposed to work, but does */
 #ourStory {
   text-align: justify;
 }
-div.carousel-caption {
+
+.carousel-caption {
   font-weight: bold;
   display: block;
   text-shadow: 2px 2px 4px #ff7f50;
   color: white;
   padding-bottom: 3px;
   bottom: 2px;
+}
+
+.carousel-inner>.item>img {
+  margin: 0 auto;
 }
 
 #proposal-img {
@@ -203,8 +208,6 @@ div.carousel-caption {
 /*****************/
 /* Media Queries */
 /*****************/
-@grid-float-breakpoint: 1000px;
-
 @media screen and (min-width: 768px) {
   .hidden_desktop {
     display: none;
