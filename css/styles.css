@@ -2,6 +2,15 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   font-size:  20px;
   color: white;
+  background-image: url("../images/pink_rice.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #fad1bd;
 }
 
 h1 {
@@ -14,7 +23,7 @@ h1 {
 
 h2 {
   font-family: 'Dancing Script', cursive, sans-serif;
-  color: #ff7f50;
+  color: #fad1bd;
   text-shadow: 2px 2px 4px black;
   padding-left: 20px;
 }
@@ -77,7 +86,7 @@ hr:before { /* Not really supposed to work, but does */
 /* Navbar Customization */
 /************************/
 .navbar-default {
-  background: #ff7f50;
+  background: #fad1bd;
 }
 
 .navbar-default .navbar-nav>li>a, a:visited {
@@ -123,28 +132,12 @@ hr:before { /* Not really supposed to work, but does */
         margin: 15px 0;
     }
     /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
+    .navbar-collapse.collapse.in {
         display: block!important;
     }
     .collapsing {
         overflow: hidden!important;
     }
-}
-
-/****************************/
-/* Custom Class Definitions */
-/****************************/
-.scroll {
-  white-space: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-.hotel_img {
-  object-fit: cover;
-  width: auto;
-  height: 250px;
 }
 
 /***************************/
@@ -159,7 +152,7 @@ hr:before { /* Not really supposed to work, but does */
 .carousel-caption {
   font-weight: bold;
   display: block;
-  text-shadow: 2px 2px 4px #ff7f50;
+  text-shadow: 2px 2px 4px #fad1bd;
   color: white;
   padding-bottom: 3px;
   bottom: 2px;
@@ -181,20 +174,46 @@ hr:before { /* Not really supposed to work, but does */
 }
 
 .glyphicons {
-  color: #ff7f50 !important;
+  color: #fad1bd !important;
 }
 
 a:link, a:visited {
   color: white;
   text-decoration: none;
-  text-shadow:  2px 2px 4px #ff7f50;
+  text-shadow:  2px 2px 4px #fad1bd;
   font-style: italic;
 }
 
 a:hover {
-  color: #ff7f50;
+  color: #fad1bd;
   text-decoration: none;
   text-shadow: 0 0 4px blue;
+}
+
+/****************************/
+/* Custom Class Definitions */
+/****************************/
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.hotel_img {
+  object-fit: cover;
+  width: auto;
+  height: 250px;
+}
+
+.book-hotel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.home-image {
+  /* max-height: 70vh; */
+  /* width: 80%; */
 }
 
 /*****************/
@@ -205,7 +224,7 @@ a:hover {
     display: none;
   }
 
-  body {
+/*   body {
   background-image: url("../images/mg2.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -214,8 +233,8 @@ a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: #ff7f50;
-  }
+  background-color: #fad1bd;
+  } */
 }
 
 @media screen and (max-width: 767px) {
@@ -223,7 +242,7 @@ a:hover {
     display: none;
   }
 
-  body {
+/*   body {
   background-image: url("../images/mg1-mobile.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -232,6 +251,6 @@ a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: #ff7f50;
-  }
+  background-color: #fad1bd;
+  } */
 }
