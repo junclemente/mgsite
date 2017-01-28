@@ -53,8 +53,6 @@ footer, navbar-fixed-bottom {
   font-weight: bold;
 }
 
-
-
 time {
   text-align: right;
   font-size: 15px;
@@ -179,16 +177,16 @@ hr:before { /* Not really supposed to work, but does */
 }
 
 a:link, a:visited {
-  color: white;
+  color: #ff7f50;
   text-decoration: none;
-  text-shadow:  2px 2px 4px #fad1bd;
+  text-shadow:  0 0 8px white;
   font-style: italic;
 }
 
 a:hover {
-  color: #fad1bd;
+  color: white;
   text-decoration: none;
-  text-shadow: 0 0 4px blue;
+  text-shadow: 0 0 8px blue;
 }
 
 /****************************/
@@ -212,9 +210,19 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.home-image {
-  /* max-height: 70vh; */
-  /* width: 80%; */
+.home-img {
+  max-height: 60vh;
+  width: auto;
+  padding: 2px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.mg-img {
+  max-height: 70vh;
+  max-width: 50%;
+  padding: 10px;
+  object-fit: contain;
 }
 
 /*****************/
@@ -225,17 +233,17 @@ a:hover {
     display: none;
   }
 
-/*   body {
-  background-image: url("../images/mg2.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #fad1bd;
-  } */
+  .hm-img-left {
+    margin-top: 30vh;
+  }
+
+  .hm-img-center {
+    margin-top: 10vh;
+  }
+
+  .hm-img-right {
+    margin-top: 1vh;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -243,15 +251,15 @@ a:hover {
     display: none;
   }
 
-/*   body {
-  background-image: url("../images/mg1-mobile.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #fad1bd;
-  } */
+  .hm-img-left {
+    margin-top: 5px;
+  }
+
+  .hm-img-center {
+    margin-top: 5px;
+  }
+
+  .hm-img-right {
+    margin-top: 5px;
+  }
 }
