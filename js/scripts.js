@@ -25,7 +25,7 @@ var navBar = {
 // Populate navBar
 navBar.display();
 
-$("a[data-toggle").on("click", function(e) {
+$("a[data-toggle]").on("click", function(e) {
   e.preventDefault();
   var selector = $(this).data("toggle");
   $("section.content").hide();
