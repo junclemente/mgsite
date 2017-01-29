@@ -214,8 +214,8 @@ a:hover {
   max-height: 60vh;
   width: auto;
   padding: 2px;
-  vertical-align: middle;
-  object-fit: contain;
+  /*vertical-align: middle;*/
+  /*object-fit: contain;*/
 }
 
 .mg-img {
@@ -234,7 +234,7 @@ a:hover {
   }
 
   .hm-img-left {
-    margin-top: 30vh;
+    margin-top: 25vh;
   }
 
   .hm-img-center {
