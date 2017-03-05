@@ -145,7 +145,7 @@ hr:before { /* Not really supposed to work, but does */
 /***************************/
 
 #ourStory {
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 .carousel-caption {
