@@ -38,7 +38,10 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul id="navBarContent" class="nav navbar-nav"></ul>
+          <!-- <ul id="navBarContent" class="nav navbar-nav"></ul> -->
+          <ul class="nav navbar-nav" data-bind="foreach: navigationList">
+            <li data-bind="click: $parent.selectNavigation"><a href="#" data-bind="attr: { 'data-toggle': url }, text: name"></a></li>
+          </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
@@ -455,4 +458,5 @@
   <script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/libs/knockout-v3.4.1.js"></script>
   <script async defer src="js/scripts.js"></script>
+  <script async defer src="js/app.js"></script>
 </html>
