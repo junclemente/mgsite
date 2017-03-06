@@ -63,7 +63,7 @@ var CountDownModel = function(dt, id) {
             document.getElementById(id).innerHTML += seconds + ' sec';
         }
 
-        timer = setInterval(showRemaining, 1000);
+        // timer = setInterval(showRemaining, 1000);
 };
 
 var NavBarModel = function(data) {
