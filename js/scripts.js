@@ -15,8 +15,8 @@ var navBar = {
     var navHTMLLinkGeneric = '<li><a href="#" data-toggle="#%navLink%">%page%</a><li>';
 
     for (var i=0; i < navBar.navBarList.length; i++) {
-      navHTMLLink = navHTMLLinkGeneric.replace("%page%", navBar.navBarList[i]["name"]);
-      navHTMLLink = navHTMLLink.replace("%navLink%", navBar.navBarList[i]["url"]);
+      navHTMLLink = navHTMLLinkGeneric.replace("%page%", navBar.navBarList[i].name);
+      navHTMLLink = navHTMLLink.replace("%navLink%", navBar.navBarList[i].url);
       $("#navBarContent").append(navHTMLLink);
     }
   },
@@ -30,7 +30,7 @@ $("a[data-toggle]").on("click", function(e) {
   var selector = $(this).data("toggle");
   $("section.content").hide();
   $(selector).fadeIn(850);
-})
+});
 
 // Auto Close Navbar on Click
 $('.nav a').on('click', function() {
@@ -38,7 +38,7 @@ $('.nav a').on('click', function() {
   $('.navbar-toggle').click();
 
   }
-})
+});
 
 
 // Animate to smooth scroll
