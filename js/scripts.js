@@ -71,7 +71,7 @@ function CountDownTimer(dt, id)
             if (distance < 0) {
 
                 clearInterval(timer);
-                document.getElementById(id).innerHTML = 'EXPIRED!';
+                // document.getElementById(id).innerHTML = 'EXPIRED!';
 
                 return;
             }
