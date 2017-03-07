@@ -62,6 +62,13 @@ time {
   font-size: 15px;
   color: white;
 }
+
+.breezy-photo {
+  width: 60%;
+  margin: 5px auto 5px auto;
+  display: block;
+
+}
 /*********************************************************/
 /* hr style source: https://css-tricks.com/examples/hrs/ */
 /*********************************************************/
