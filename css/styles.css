@@ -57,7 +57,7 @@ footer, navbar-fixed-bottom {
   font-weight: bold;
 }
 
-time {
+.time {
   text-align: right;
   font-size: 15px;
   color: white;

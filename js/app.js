@@ -33,37 +33,42 @@ var navBarList = [
 	}
 ];
 
-var CountDownModel = function(dt, id) {
-        var end = new Date(dt);
+var CountDownModel = function() {
 
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-        var timer;
+	var self = this;
+	COUNTDOWN_DATE = '09/02/2017 12:00 AM';
+	var currentTime = '';
+	self.countdownValue = ko.observable(currentTime);
+	var end = new Date(COUNTDOWN_DATE);
 
-        function showRemaining() {
-            var now = new Date();
-            var distance = end - now;
-            if (distance < 0) {
+	var _second = 1000;
+	var _minute = _second * 60;
+	var _hour = _minute * 60;
+	var _day = _hour * 24;
+	var timer;
 
-                clearInterval(timer);
-                document.getElementById(id).innerHTML = 'EXPIRED!';
+	function showRemaining() {
+	    var now = new Date();
+	    var distance = end - now;
+	    if (distance < 0) {
 
-                return;
-            }
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
+	        clearInterval(timer);
+	        self.countdownValue('EXPIRED!');
 
-            document.getElementById(id).innerHTML = days + ' days  ';
-            document.getElementById(id).innerHTML += hours + ' hrs ';
-            document.getElementById(id).innerHTML += minutes + ' min ';
-            document.getElementById(id).innerHTML += seconds + ' sec';
-        }
+	        return;
+	    }
+	    var days = Math.floor(distance / _day);
+	    var hours = Math.floor((distance % _day) / _hour);
+	    var minutes = Math.floor((distance % _hour) / _minute);
+	    var seconds = Math.floor((distance % _minute) / _second);
 
-        // timer = setInterval(showRemaining, 1000);
+	    currentTime = days + ' days  ';
+	    currentTime += hours + ' hrs ';
+	    currentTime += minutes + ' min ';
+	    self.countdownValue(currentTime += seconds + ' sec');
+	}
+
+	timer = setInterval(showRemaining, 1000);
 };
 
 var NavBarModel = function(data) {
@@ -78,7 +83,8 @@ var AppViewModel = function() {
 
 	var that = this;
 	that.navigationList = ko.observableArray([]);
-	that.countdownClock = ko.observable(new CountDownModel('09/02/2017 12:00 AM', 'countdown'));
+	that.countdownClock = ko.observable(new CountDownModel());
+	console.log(that.countdownClock().countdownValue());
 
 	navBarList.forEach(function(data) {
 		that.navigationList.push(new NavBarModel(data));
