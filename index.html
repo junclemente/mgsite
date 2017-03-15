@@ -49,10 +49,12 @@
 
     <section id="home" class="content container">
       <h1>Grace and Melvin's Wedding Page</h1>
-      <h3>September 2, 2017</h3>
+      <h3 data-bind="text: weddingInfo().wedding_date"></h3>
+
       <noscript>
         <h3>JavaScript has been disabled in your browser.</h3>
-        <p>To view the contents of this website, you must enable JavaScript or use a different phone or computer that does have JavaScript enabled.</p>
+        <p>To view the contents of this website, you must enable JavaScript or use a different phone or computer that does have JavaScript enabled in the browser.</p>
+        <p>If you need further assistance, please contact Melvin at <a href="tel:18588489060">858.848.9060</a>.</p>
         <h4>Please note the following information:</h4>
           <strong>Save the date: </strong> Sept. 02, 2017<br>
           <p>The Ceremony and Reception will be held at the Admiral Kidd Conference and Catering Center:</p>
@@ -70,11 +72,12 @@
           <p><a href="https://www.honeyfund.com/wedding/gracevin2017" target="_blank">Honeyfund Link</a></p>
 
           <h2>RSVP</h2>
-          <p>Please RSVP before May 20th, 2017 to join us on our big day!</p>
+          <p>Please RSVP before July 28th, 2017 to join us on our big day!</p>
+          <p><a href="https://goo.gl/forms/6oQsnVcJsc7LWbek2" target="_blank">Click here to RSVP!</a></p>
+
 
           <p>Please provide your full name as printed on your government-issued ID or State ID or driver's license card. This name will appear on a list for limited base access to the venue. If you RSVP after the above date, your name will not appear on this list and you will be turned away from the Naval Base.</p>
 
-          <a href="#">Click here to RSVP</a>
       </noscript>
 
       <div class="row">
@@ -231,7 +234,7 @@
       <p>Capture moments with your camera on your cell phone anytime on the big day and post onto instagram  using #gracevin. These memories will be projected throughout the reception and printed at the booth.  Remember to pick up the photo!</p>
 
 
-      <p>Don’t have an instagram? Text the photo to this number: ############</p>
+      <p>Don’t have an instagram? Text the photo to this number: <span data-bind="text: weddingInfo().instagram_text"></span>
 
       <p>These will also be printed and projected as well.</p>
     </section>
@@ -324,11 +327,11 @@
         <hr>
       </article>
 
-      <article>
+      <article data-bind="with: weddingInfo">
         <h2>Transportation</h2>
         <p>Shuttles will be provided for guests staying in Homewood Suites Liberty Station, Courtyard Marriot Liberty Station, and Holiday Inn San Diego Bayside.</p>
-        <p>Roundtrip shuttle services will be provided for Homewood Suites and Courtyard Marriot Liberty Station starting at 4:15pm and ending at 4:55pm.</p>
-        <p>Holiday Inn San Diego will have pick up times at 4:00pm and 5:05pm.</p>
+        <p>Roundtrip shuttle services will be provided for Homewood Suites and Courtyard Marriot Liberty Station starting at <span data-bind="text: shuttle_roundtrip_start"></span> and ending at <span data-bind="text: shuttle_roundtrip_end"></span>.</p>
+        <p>Holiday Inn San Diego will have pick up times at <span data-bind="text: holiday_inn_start"></span> and <span data-bind="text: holiday_inn_stop">.</p>
         <hr>
       </article>
 
@@ -346,10 +349,10 @@
         <hr>
       </article>
 
-      <article>
+      <article data-bind="with: weddingInfo">
         <h2>Contact Information</h2>
-        <p>If there are any questions, please email the to-be-wedded couple: <a href="mailto:graceandmelvin@gmail.com">graceandmelvin@gmail.com</a></p>
-        <p>If you need any help with the process for RSVPing, please feel free to <a href="tel:18588489060">call Melvin (858.848.9060)</a></p>
+        <p>If there are any questions, please email the to-be-wedded couple: <a data-bind="attr: { href: email_to }, text: display_email"></a></p>
+        <p>If you need any help with the process for RSVPing, please feel free to call Melvin at <a data-bind="attr: { href: phone }, text: display_phone"></a></p>
         <div>
           <p>Our wedding coordinator Courtney Dahl Carcioppolo will be present on-site on the day of the wedding. All questions and concerns should be addressed to her.</p>
           <a href="http://www.breezydayweddings.net/" target="_blank"><img class="breezy-photo img-responsive" src="images/breezy-day-logo.jpg" alt="Breezy Day Logo"></a><img class="breezy-photo img-responsive" src="images/breezy-day.png" alt="Courtney Dahl Carcioppolo">
@@ -360,69 +363,32 @@
     <section id="accommodations" class="content container">
       <h1>Accommodations</h1>
       <p>A limited number of room blocks are reserved for the following hotels listed below. A two-night stay is required to obtain the discounted rate. If you are interested in staying in one of these hotels, please book a room/suite before <strong>July 28, 2017</strong> for the dates of <strong>Sept. 1st through Sept 3rd, 2017</strong>.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Homewood Suites Liberty Station</h2>
-            <img class="hidden_mobile img-responsive hotel_img" src="images/homewoodsuites-lg.jpg" alt="Homewood Suites Liberty Station">
-            <img class="hidden_desktop img-responsive" src="images/homewoodsuites-sm.jpg" alt="Homewood Suites Liberty Station">
-              <p>2576 Laning Rd<br>
-              San Diego, CA 92016<br>
-              <span class="glyphicon glyphicon-phone"></span> : <a href="tel:16192220500">619.222.0500</a><br></p>
+      <div class="row" data-bind="foreach: hotelList">
+        <div class="col-md-4"">
+          <h2 data-bind="text: name"></h2>
+            <img class="hidden_mobile img-responsive hotel_img" data-bind="attr: { src: image_lg, alt: name, title: name }">
+            <img class="hidden_desktop img-responsive" data-bind="attr: { src: image_sm, alt: name, title: name }">
+              <p><span data-bind="text: address"></span><br>
+              <span data-bind="text: city_state"></span><br>
+              <span class="glyphicon glyphicon-phone"></span> : <a data-bind="attr: { href: phone }, text: display_phone"></a><br></p>
 
               <h3>Booking Info</h3>
-              <a class="book-hotel" href="https://secure3.hilton.com/en_US/hw/reservation/book.htm?inputModule=HOTEL&ctyhocn=SANLSHW&spec_plan=CHWJCW&arrival=20170901&departure=20170903&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank">Click here to book your stay at Homewood Suites</a><br>
-              <strong>Group Name:</strong> JANG CLEMENTE WEDDING<br>
-              <strong>Group Code:</strong> JCW<br>
+              <a class="book-hotel" data-bind="attr: { href: booking_url }" target="_blank">Click here to book your stay at <span data-bind="text: name"></span></a><br>
+              <strong>Group Name:</strong> <span data-bind="text: group_name"></span><br>
+              <strong>Group Code:</strong> <span data-bind="text: group_code"></span><br>
               <strong>Price:</strong><br>
-              Studio: $199/night<br>
-              1-Bedroom Suite: $209/night<br>
-              2-Bedroom Suite: $289/night<br>
+              <span data-bind="html: price_html"></span>
         </div>
-
-        <div class="col-md-4">
-          <h2>Courtyard Marriot Liberty Station</h2>
-            <img class="hidden_mobile img-responsive hotel_img" src="images/courtyardmarriot-lg.jpg" alt="Courtyard Marriot">
-            <img class="hidden_desktop img-responsive" src="images/courtyardmarriot-sm.jpg" alt="Courtyard Marriot">
-            <p>2592 Laning Road<br>
-            San Diego, CA 92106<br>
-            <span class="glyphicon glyphicon-phone"></span> : <a href="tel:16192211900">619.221.1900</a><br></p>
-
-            <h3>Booking Info</h3>
-            <a class="book-hotel" href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Jang%20Clemente%20Wedding%20%5Esanal%60JCWJCWA%7CJCWJCWB%60179%60USD%60false%601%609/1/17%609/3/17%6007/28/17&app=resvlink&stop_mobi=yes" target="_blank">Click here to book your stay at the Courtyard Marriot</a><br>
-            <strong>Group Name:</strong> JANG CLEMENTE WEDDING<br>
-            <strong>Group Code:</strong> JCW<br>
-            <strong>Price:</strong><br>
-            1-Bedroom: $179/night<br>
-        </div>
-
-        <div class="col-md-4">
-          <h2>Holiday Inn San Diego Bayside</h2>
-            <img class="hidden_mobile img-responsive hotel_img" src="images/holidayinn-lg.jpg" alt="Holiday Inn San Diego Bayside">
-            <img class="hidden_desktop img-responsive" src="images/holidayinn-sm.jpg" alt="Holiday Inn San Diego Bayside">
-            <p>4875 North Harbor Drive<br>
-            San Diego, CA 92106<br>
-            <span class="glyphicon glyphicon-phone"></span> : <a href="tel:16192213061">619.221.3061</a><br></p>
-
-           <h3>Booking Info</h3>
-            <a class="book-hotel" href="https://www.ihg.com/holidayinn/hotels/us/en/san-diego/sanby/hoteldetail?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki.sp.nd.ct&qChld=0&qFRA=1&qGRM=0&qGrpCd=CJW&qIta=99801505&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qSHp=1&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&icdv=99801505" target="_blank">Click here to book your stay at Holiday Inn Bayside</a><br>
-            <strong>Group Name:</strong> CLEMENTE-JANG WEDDING<br>
-            <strong>Price:</strong><br>
-            Std Rm: $169/night<br>
-            Executive Rm: $199/night<br>
-            Suite: $269/night*<br>
-            <p>* Suites cannot be booked online at the negotiated rate. To book a suite, please call <a href="tel:18006628899">800.662.8899</a></p>
-        </div>
-
       </div>
     </section>
 
-    <section id="registry" class="content container">
+    <section id="registry" class="content container" data-bind="with: weddingInfo">
       <h1>Registry</h1>
       <img src="images/registry.jpg" class="mg-img img-responsive pull-left" alt="Melvin and Grace">
       <p>We are honored you will share in our special day. Your presence is our gift! Gifts are not necessary but if you are willing to, we accept your kind donations!</p>
 
       <p>Follow the instructions on the link below to donate =]</p>
-      <p><a href="https://www.honeyfund.com/wedding/gracevin2017" target="_blank">Honeyfund Link</a></p>
+      <p><a data-bind="attr: { href: honeyfund_link }" target="_blank">Honeyfund Link</a></p>
     </section>
 
     <section id="rsvp" class="content container">
@@ -438,12 +404,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-9 hidden_mobile">
-          <h4><span class="hidden_mobile">Save The Date</span><span class="glyphicon glyphicon-exclamation-sign hidden_desktop"></span> : September 02, 2017
+          <h4><span class="hidden_mobile">Save The Date</span><span class="glyphicon glyphicon-exclamation-sign hidden_desktop"></span> : <span data-bind="text: weddingInfo().wedding_date"></span>
           <span class="glyphicon glyphicon-time"></span> <span class="time" data-bind="text: countdownClock().countdownValue()"></span> left...</h4>
         </div>
-        <div class="col-md-3">
-          <span class="glyphicon glyphicon-envelope"></span> : <a href="emailto:graceandmelvin@gmail.com">graceandmelvin@gmail.com</a><br>
-          <span class="glyphicon glyphicon-phone"></span> : <a href="tel:18588489060">858.848.9060</a>
+        <div class="col-md-3" data-bind="with: weddingInfo">
+          <span class="glyphicon glyphicon-envelope"></span> : <a data-bind="attr: { href: email_to }, text: display_email"></a><br>
+          <span class="glyphicon glyphicon-phone"></span> : <a data-bind="attr: { href: phone }, text: display_phone"></a>
         </div>
       </div>
     </div>
