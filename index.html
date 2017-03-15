@@ -39,8 +39,8 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <!-- <ul id="navBarContent" class="nav navbar-nav"></ul> -->
-          <ul class="nav navbar-nav" data-bind="foreach: navigationList">
-            <li data-bind="click: $parent.selectNavigation"><a href="#" data-bind="attr: { 'data-toggle': url }, text: name"></a></li>
+          <ul class="nav navbar-nav navbar-flexbox" data-bind="foreach: navigationList">
+            <li class="navbar-flexitem" data-bind="click: $parent.selectNavigation"><a href="#" data-bind="attr: { 'data-toggle': url }, text: name"></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -288,10 +288,7 @@
       <article>
         <h2>Directions</h2>
               <div>
-                  <p>Admiral Kidd</p>
-                  3305 McDonough Rd.<br>
-                  San Diego, CA <br>
-                  Tel: 619.524.6287<br>
+                  <p><a href="https://www.google.com/maps/place/Admiral+Kidd+Catering+%26+Conference+Center/@32.7226934,-117.21991,17z/data=!4m12!1m6!3m5!1s0x80deab0a8d325021:0x10db556eeeeb864f!2sAdmiral+Kidd+Catering+%26+Conference+Center!8m2!3d32.7226934!4d-117.217716!3m4!1s0x80deab0a8d325021:0x10db556eeeeb864f!8m2!3d32.7226934!4d-117.217716" target="_blank">Admiral Kidd | 3305 McDonough Rd., San Diego, CA</a> | Ph: <a href="tel:16195246287">619.524.6287</a></p>
               </div>
         <div class="row">
           <div class="col-sm-6">
