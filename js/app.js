@@ -1,38 +1,3 @@
-var navBarList = [
-	{
-		name: "Home",
-		url: "home"
-	},
-	{
-		name: "Our Story",
-		url: "ourStory"
-	},
-	{
-		name: "Add To Our Story",
-		url: "addToOurStory"
-	},
-	{
-		name: "Schedule of Events",
-		url: "scheduleOfEvents"
-	},
-	{
-		name: "Information",
-		url: "information"
-	},
-	{
-		name: "Accommodations",
-		url: "accommodations"
-	},
-	{
-		name: "Registry",
-		url: "registry"
-	},
-	{
-		name: "RSVP",
-		url: "rsvp"
-	}
-];
-
 var CountDownModel = function() {
 
 	var self = this;
@@ -86,7 +51,7 @@ var AppViewModel = function() {
 	that.countdownClock = ko.observable(new CountDownModel());
 	console.log(that.countdownClock().countdownValue());
 
-	navBarList.forEach(function(data) {
+	NAVBAR_LIST.forEach(function(data) {
 		that.navigationList.push(new NavBarModel(data));
 	});
 
