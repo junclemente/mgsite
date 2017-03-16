@@ -144,3 +144,10 @@ var CAROUSEL_LIST = [
 		description: "July 4th Weekend, Mission Bay, San Diego"
 	}
 ];
+
+var MAP_LOCATIONS = [
+	{
+		name: "Admiral Kidd",
+		location: { lat: 32.722743, lng: -117.217732 }
+	}
+];

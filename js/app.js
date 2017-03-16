@@ -1,3 +1,5 @@
+
+
 var CountDownModel = function() {
 
 	var self = this;
@@ -131,6 +133,10 @@ var AppViewModel = function() {
 			}
 
 			location.hash = nav.url;
+		}
+
+		if (nav.name == "Information") {
+			initMap();
 		}
 	};
 };

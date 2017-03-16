@@ -198,7 +198,7 @@
       <article>
         <h2>Directions</h2>
               <div>
-                  <p><a href="https://www.google.com/maps/place/Admiral+Kidd+Catering+%26+Conference+Center/@32.7226934,-117.21991,17z/data=!4m12!1m6!3m5!1s0x80deab0a8d325021:0x10db556eeeeb864f!2sAdmiral+Kidd+Catering+%26+Conference+Center!8m2!3d32.7226934!4d-117.217716!3m4!1s0x80deab0a8d325021:0x10db556eeeeb864f!8m2!3d32.7226934!4d-117.217716" target="_blank">Admiral Kidd | 3305 McDonough Rd., San Diego, CA</a> | Ph: <a href="tel:16195246287">619.524.6287</a></p>
+                  <p>Admiral Kidd | 3305 McDonough Rd., San Diego, CA | Ph: <a href="tel:16195246287">619.524.6287</a></p>
               </div>
         <div class="row">
           <div class="col-sm-6">
@@ -230,6 +230,9 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div class="map-container">
+          <div id="map" class="google-map"></div>
         </div>
         <hr>
       </article>
@@ -325,8 +328,10 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/libs/knockout-v3.4.1.js"></script>
   <script src="js/information.js"></script>
-  <script async defer src="js/app.js"></script>
+  <script src="js/maps.js"></script>
+  <script src="js/app.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC91efjkGhQuhCR318AzfZI_IBKvW9aaUw" onerror="loadFailure()"></script>
 </html>
