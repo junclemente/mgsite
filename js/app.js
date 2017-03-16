@@ -94,11 +94,12 @@ var NavBarModel = function(data) {
 var AppViewModel = function() {
 
 	var that = this;
-	that.weddingInfo = ko.observable(new GeneralInfo());
+	that.activeSection = ko.observable();
 	that.carouselList = ko.observableArray([]);
 	that.navigationList = ko.observableArray([]);
 	that.hotelList = ko.observableArray([]);
 	that.countdownClock = ko.observable(new CountDownModel());
+	that.weddingInfo = ko.observable(new GeneralInfo());
 	console.log(that.countdownClock().countdownValue());
 
 	NAVBAR_LIST.forEach(function(data) {
@@ -113,17 +114,24 @@ var AppViewModel = function() {
 		that.carouselList.push(new CarouselModel(image));
 	});
 
+	that.activeSection(that.navigationList()[0]);
+
 	that.selectNavigation = function(nav) {
-		console.log(nav.url);
-		$("section.content").hide();
-		var selector = "#" + nav.url;
-		$(selector).fadeIn(850);
+		if (nav == that.activeSection()) {
+			console.log('section already active');
+		} else {
+			console.log(nav.url);
+			that.activeSection(nav);
+			$("section.content").hide();
+			var selector = "#" + nav.url;
+			$(selector).fadeIn(850);
 
-		if( $('.navbar-toggle').css('display') != 'none') {
-			$('.navbar-toggle').click();
+			if( $('.navbar-toggle').css('display') != 'none') {
+				$('.navbar-toggle').click();
+			}
+
+			location.hash = nav.url;
 		}
-
-		location.hash = nav.url;
 	};
 };
 
