@@ -68,7 +68,7 @@ var HOTEL_LIST = [
 		display_phone: "619.221.3061",
 		booking_url: "https://www.ihg.com/holidayinn/hotels/us/en/san-diego/sanby/hoteldetail?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki.sp.nd.ct&qChld=0&qFRA=1&qGRM=0&qGrpCd=CJW&qIta=99801505&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qSHp=1&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&icdv=99801505",
 		group_name: "CLEMENTE-JANG WEDDING",
-		group_code: "",
+		group_code: "CJW",
 		image_base: "holidayinn",
 		price_html: 'Std Rm: $169/night<br>' +
 					'Executive Rm: $199/night<br>' +
