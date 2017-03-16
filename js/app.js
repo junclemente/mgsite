@@ -53,6 +53,14 @@ var HotelListModel = function(hotel) {
 	self.price_html = hotel.price_html;
 };
 
+var CarouselModel = function(info) {
+
+	var self = this;
+
+	self.image = "images/carousel/mgimg" + info.image_id + ".jpg";
+	self.name = info.description;
+};
+
 var GeneralInfo = function() {
 
 	var self = this;
@@ -87,6 +95,7 @@ var AppViewModel = function() {
 
 	var that = this;
 	that.weddingInfo = ko.observable(new GeneralInfo());
+	that.carouselList = ko.observableArray([]);
 	that.navigationList = ko.observableArray([]);
 	that.hotelList = ko.observableArray([]);
 	that.countdownClock = ko.observable(new CountDownModel());
@@ -98,6 +107,10 @@ var AppViewModel = function() {
 
 	HOTEL_LIST.forEach(function(hotel) {
 		that.hotelList.push(new HotelListModel(hotel));
+	});
+
+	CAROUSEL_LIST.forEach(function(image) {
+		that.carouselList.push(new CarouselModel(image));
 	});
 
 	that.selectNavigation = function(nav) {

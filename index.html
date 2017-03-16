@@ -103,106 +103,13 @@
         <div class="col-md-6">
           <div id="mg-carousel" class="carousel slide center-block" data-ride="carousel">
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="images/carousel/mgimg001.jpg" class="img-rounded" alt="Iriga, Bikol, Philippines">
-                <div class="carousel-caption">
-                  Iriga, Bikol, Philippines
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg002.jpg" class="img-rounded" alt="Boracay, Philippines">
-                <div class="carousel-caption">
-                  Boracay, Philippines
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg003.jpg" class="img-rounded" alt="Ketchikan, Alaska">
-                <div class="carousel-caption">
-                  Ketchikan, Alaska
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg004.jpg" class="img-rounded" alt="The Grandy Canyon, Arizona">
-                <div class="carousel-caption">
-                  The Grand Canyon, Arizona
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg005.jpg" class="img-rounded" alt="Las Vegas, Nevada">
-                <div class="carousel-caption">
-                  Las Vegas, Nevada
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg006.jpg" class="img-rounded" alt="Hoover Dam, Boulder City, Nevada">
-                <div class="carousel-caption">
-                  Hoover Dam, Nevada
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg007.jpg" class="img-rounded" alt="Lake Arenal, Costa Rica">
-                <div class="carousel-caption">
-                  Lake Arenal, Costa Rica
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg008.jpg" class="img-rounded" alt="Pirate's Day, Ventura, California">
-                <div class="carousel-caption">
-                  Pirate's Day, Ventura, California
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg009.jpg" class="img-rounded" alt="Snowboarding at Mammoth Mountain, California">
-                <div class="carousel-caption">
-                  Mammoth Mountain, California
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg010.jpg" class="img-rounded" alt="Cinderella's Castle, Disneyland, Anaheim, CA">
-                <div class="carousel-caption">
-                  Disneyland, Anaheim, California
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg011.jpg" class="img-rounded" alt="Hollywood, California">
-                <div class="carousel-caption">
-                  Hollywood, California
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg012.jpg" class="img-rounded" alt="Liberty Island, New York">
-                <div class="carousel-caption">
-                  Liberty Island, New York
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg013.jpg" class="img-rounded" alt="The Mystery Spot, Santa Cruz, CA">
-                <div class="carousel-caption">
-                  The Mystery Spot, Santa Cruz, California
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg014.jpg" class="img-rounded" alt="Cheers, Boston, CA">
-                <div class="carousel-caption">
-                  Cheers, Boston
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg015.jpg" class="img-rounded" alt="Universal Studios, Los Angeles, CA">
-                <div class="carousel-caption">
-                  Universal Studios, Los Angeles, CA
-                </div>
-              </div>
-              <div class="item">
-                <img src="images/carousel/mgimg016.jpg" class="img-rounded" alt="July 4th Weekend, Mission Bay, San Diego, CA">
-                <div class="carousel-caption">
-                  July 4th Weekend, Mission Bay, San Diego, CA
-                </div>
+            <!-- Knockout Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" data-bind="foreach: carouselList">
+              <div class="item" data-bind="css: { 'active' : $index() == 0 }">
+                <img data-bind="attr: { src: image, alt: name }">
+                <div class="carousel-caption" data-bind="text: name"></div>
               </div>
             </div>
-
             <!-- Controls -->
             <a class="left carousel-control" href="#mg-carousel" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -421,6 +328,6 @@
   <script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/libs/knockout-v3.4.1.js"></script>
   <!-- <script async defer src="js/scripts.js"></script> -->
-  <script src="js/locations.js"></script>
+  <script src="js/information.js"></script>
   <script async defer src="js/app.js"></script>
 </html>
