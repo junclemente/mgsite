@@ -70,6 +70,7 @@ var GeneralInfo = function() {
 	// General Information
 	self.wedding_date = 'September 02, 2017';
 	self.wedding_time = '5:00pm';
+	self.register_by = 'July 28, 2017';
 	self.phone = 'tel:18588489060';
 	self.display_phone = '858.848.9060';
 	self.email_to = 'mailto:graceandmelvin@gmail.com';
