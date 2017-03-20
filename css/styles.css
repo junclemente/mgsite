@@ -269,6 +269,14 @@ a:hover {
   padding: 10px;
 }
 
+.white {
+  color: #fff;
+}
+
+.salmon {
+  color: #fad1bd;
+}
+
 /*****************/
 /* Media Queries */
 /*****************/
