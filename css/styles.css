@@ -74,14 +74,14 @@ navbar-fixed-bottom {
 
 .map-container {
   height: 500px;
-  width: 80%;
   margin: 0 auto 0 auto;
   padding: 0;
+  width: 80%;
 }
 
 .google-map {
-  color: white;
   background-color: grey;
+  color: white;
   height: 100%;
 }
 
