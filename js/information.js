@@ -30,6 +30,10 @@ var NAVBAR_LIST = [
 	{
 		name: "RSVP",
 		url: "rsvp"
+	},
+	{
+		name: "Sponsors / Vendors",
+		url: "sponsors"
 	}
 ];
 
@@ -149,5 +153,48 @@ var MAP_LOCATIONS = [
 	{
 		name: "Admiral Kidd",
 		location: { lat: 32.722743, lng: -117.217732 }
+	}
+];
+
+var PRIMARY_SPONSOR_LIST = [
+	{
+		m_name: "Abe Lastrella",
+		f_name: "Elsie Lastrella",
+		m_photo: "",
+		f_photo: ""
+	},
+	{
+		m_name: "Frank Bacaltos",
+		f_name: "Jeanette Baylon",
+		m_photo: "",
+		f_photo: ""
+	},
+	{
+		m_name: "Tom ???",
+		f_name: "Charito Oliva",
+		m_photo: "",
+		f_photo: ""
+	}
+];
+
+var SECONDARY_SPONSOR_LIST = [
+	{
+		item: "Cord",
+		name: "Chad Warren and Caroline Warren",
+		image: "/images/sponsors/caroline_chad.png"
+	},
+	{
+		item: "Vail",
+		name: "Calvin Baylon and Cheryl Baylon"
+	},
+	{
+		item: "Coins",
+		name: "Jason Noriega and Regina Noriega"
+	}
+];
+
+var VENDOR_LIST = [
+	{
+
 	}
 ];

@@ -86,6 +86,21 @@ var GeneralInfo = function() {
 
 };
 
+var PrimarySponsorModel = function(sponsor) {
+	var self = this;
+
+};
+
+var SecondarySponsorList = function(sponsor) {
+	var self = this;
+
+};
+
+var VendorList = function(vendor) {
+	var self = this;
+
+};
+
 var NavBarModel = function(data) {
 
 	var self = this;
@@ -101,6 +116,9 @@ var AppViewModel = function() {
 	that.carouselList = ko.observableArray([]);
 	that.navigationList = ko.observableArray([]);
 	that.hotelList = ko.observableArray([]);
+	that.primarySponsorList = ko.observableArray([]);
+	that.secondarySponsorList = ko.observableArray([]);
+	that.vendorList = ko.observableArray([]);
 	that.countdownClock = ko.observable(new CountDownModel());
 	that.weddingInfo = ko.observable(new GeneralInfo());
 	console.log(that.countdownClock().countdownValue());
@@ -116,6 +134,18 @@ var AppViewModel = function() {
 	CAROUSEL_LIST.forEach(function(image) {
 		that.carouselList.push(new CarouselModel(image));
 	});
+
+	// PRIMARY_SPONSOR_LIST.forEach(function(sponsor) {
+	// 	that.primarySponsorList.push(new PrimarySponsorModel(sponsor));
+	// });
+
+	// SECONDARY_SPONSOR_LIST.forEach(function(sponsor) {
+	// 	that.secondarySponsorList.push(new SeconarySponsorModel(sponsor));
+	// });
+
+	// VENDOR_List.forEach(function(vendor) {
+	// 	that.vendorList.push(new VendorModel(vendor));
+	// });
 
 	that.activeSection(that.navigationList()[0]);
 
