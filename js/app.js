@@ -79,10 +79,11 @@ var GeneralInfo = function() {
 	self.instagram_text = '#####';
 
 	// Shuttle Information
-	self.shuttle_roundtrip_start = '4:15pm';
-	self.shuttle_roundtrip_end = '4:55pm';
+	self.shuttle_roundtrip_start = '4:10pm';
+	self.shuttle_roundtrip_end = '4:30pm';
+	self.shuttle_final = '5:00pm';
 	self.holiday_inn_start = '4:00pm';
-	self.holiday_inn_stop = '5:05pm';
+	self.holiday_inn_stop = '5:10pm';
 
 };
 
