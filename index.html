@@ -37,9 +37,9 @@
           </button>
         </div>
 
-        <div class="collapse navbar-collapse" id="navbar-collapse">
+        <div class="collapse navbar-collapse nav-height" id="navbar-collapse">
           <!-- <ul id="navBarContent" class="nav navbar-nav"></ul> -->
-          <ul class="nav navbar-nav" data-bind="foreach: navigationList">
+          <ul class="nav navbar-nav width-auto" data-bind="foreach: navigationList">
             <li data-bind="click: $parent.selectNavigation"><a href="#" data-bind="attr: { 'data-toggle': url }, text: name"></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
