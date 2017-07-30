@@ -90,6 +90,10 @@ navbar-fixed-bottom {
   overflow: auto;
 }
 
+.crossout {
+  text-decoration: line-through;
+}
+
 /*********************************************************/
 /* hr style source: https://css-tricks.com/examples/hrs/ */
 /*********************************************************/
