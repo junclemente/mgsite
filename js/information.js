@@ -28,12 +28,12 @@ var NAVBAR_LIST = [
 		url: "registry"
 	},
 	{
-		name: "RSVP",
-		url: "rsvp"
-	},
-	{
 		name: "Sponsors / Vendors",
 		url: "sponsors"
+	},
+	{
+		name: "RSVP",
+		url: "rsvp"
 	}
 ];
 
