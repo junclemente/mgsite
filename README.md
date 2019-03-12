@@ -1,7 +1,7 @@
 # Website Repository
 
-This repository is a single-page wedding website I developed and designed. 
-The live site can be found at: [http://graceandmelvin.com](http://graceandmelvin.com)
+This repository is a single-page wedding website I developed and designed.
+The live site can be found at: [https://junclemente.github.io/mgsite/](https://junclemente.github.io/mgsite/)
 
 This site is made using:
 - Bootstrap
